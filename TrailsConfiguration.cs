@@ -1,8 +1,5 @@
 ﻿using Rocket.API;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace Trails
@@ -27,64 +24,55 @@ namespace Trails
 
 		[XmlArray ("Trails")]
 		[XmlArrayItem ("Trail")]
-		public List<customTrail> customTrails = new List<customTrail> ();
+		public List<CustomTrail> customTrails = new List<CustomTrail> ();
 
 		public void LoadDefaults ()
 		{
-			address = "localhost";
-			name = "unturned";
-			username = "unturned";
-			password = "password";
-			tablename = "trails";
-			port = 3306;
-
-			useSQL = true;
-
-			customTrails = new List<customTrail> ()
+			customTrails = new List<CustomTrail> ()
 			{
-				new customTrail ()
+				new CustomTrail ()
 				{
 					name = "electric",
 					id = 61,
 					permission = "trail.electric",
 					type = "ALWAYS"
 				},
-				new customTrail ()
+				new CustomTrail ()
 				{
 					name = "fire",
 					id = 139,
 					permission = "trail.fire",
 					type = "GROUNDED"
 				},
-				new customTrail ()
+				new CustomTrail ()
 				{
 					name = "water",
 					id = 129,
 					permission = "trail.water",
 					type = "NOTGROUNDED"
 				},
-				new customTrail ()
+				new CustomTrail ()
 				{
 					name = "red",
 					id = 124,
 					permission = "trail.red",
 					type = "INWATER,VEHICLE.140.106"
 				},
-				new customTrail ()
+				new CustomTrail ()
 				{
 					name = "orange",
 					id = 130,
 					permission= "trail.orange",
 					type = "INWATER"
 				},
-				new customTrail ()
+				new CustomTrail ()
 				{
 					name = "purple",
 					id = 132,
 					permission = "trail.purple",
 					type = "INVEHICLE.106.104"
 				},
-				new customTrail ()
+				new CustomTrail ()
 				{
 					name = "green",
 					id = 134,
@@ -95,7 +83,7 @@ namespace Trails
 		}
 	}
 
-	public class customTrail
+	public class CustomTrail
 	{
 		[XmlElement ("Name")]
 		public string name;
@@ -106,6 +94,6 @@ namespace Trails
 		[XmlElement ("Type")]
 		public string type;
 
-		public customTrail () { }
+		public CustomTrail () { }
 	}
 }

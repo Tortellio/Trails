@@ -6,3 +6,11 @@ C:\Users\HPUSER\Documents\Rocket Work\Trails\obj\Debug\Trails.pdb
 C:\Users\HPUSER\Documents\Rocket Work\Trails\bin\Debug\I18N.dll
 C:\Users\HPUSER\Documents\Rocket Work\Trails\bin\Debug\I18N.West.dll
 C:\Users\HPUSER\Documents\Rocket Work\Trails\bin\Debug\MySql.Data.dll
+C:\Users\irfan\Documents\GitHub\Trails\bin\Debug\Trails.dll
+C:\Users\irfan\Documents\GitHub\Trails\bin\Debug\Trails.pdb
+C:\Users\irfan\Documents\GitHub\Trails\bin\Debug\System.Management.dll
+C:\Users\irfan\Documents\GitHub\Trails\obj\Debug\Trails.csprojAssemblyReference.cache
+C:\Users\irfan\Documents\GitHub\Trails\obj\Debug\Trails.csproj.CoreCompileInputs.cache
+C:\Users\irfan\Documents\GitHub\Trails\obj\Debug\Trails.csproj.CopyComplete
+C:\Users\irfan\Documents\GitHub\Trails\obj\Debug\Trails.dll
+C:\Users\irfan\Documents\GitHub\Trails\obj\Debug\Trails.pdb

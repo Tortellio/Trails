@@ -1,20 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using Rocket.Core;
 using Rocket.Core.Logging;
 using Rocket.Core.Plugins;
-using Rocket.API;
 using Rocket.API.Collections;
-using Rocket.API.Extensions;
-using Rocket.API.Serialisation;
 using Rocket.Unturned;
 using Rocket.Unturned.Player;
-using Rocket.Unturned.Chat;
 using Rocket.Unturned.Events;
 using SDG.Unturned;
-using Steamworks;
 
 namespace Trails
 {
@@ -22,7 +15,6 @@ namespace Trails
 	{
 		public static Trails Instance;
 		public static Dictionary<ulong, List <ushort>> trails;
-		public Database database;
 
 		#region Translations
 		public override TranslationList DefaultTranslations
@@ -52,29 +44,15 @@ namespace Trails
 		protected override void Load ()
 		{
 			Instance = this;
-			Configuration.Save ();
-			if (Configuration.Instance.useSQL)
-				database = new Database ();
+            Logger.Log("Trails has been unloaded!");
+            Configuration.Save ();
 			trails = new Dictionary<ulong, List <ushort>> ();
 			UnturnedPlayerEvents.OnPlayerUpdatePosition += PlayerMoved;
-
-			U.Events.OnPlayerConnected += playerConnected;
-			U.Events.OnPlayerDisconnected += playedDisconnected;
+			U.Events.OnPlayerDisconnected += PlayedDisconnected;
 
 		}
 
-		private void playerConnected (UnturnedPlayer player)
-		{
-			if (!Configuration.Instance.useSQL)
-				return;
-			var loadedTrails = database.getTrails (player);
-			if (loadedTrails != null)
-			{
-				trails.Add ((ulong)player.CSteamID, loadedTrails);
-			}
-		}
-
-		private void playedDisconnected (UnturnedPlayer player)
+		private void PlayedDisconnected (UnturnedPlayer player)
 		{
 			if (trails.ContainsKey ((ulong)player.CSteamID))
 				trails.Remove ((ulong)player.CSteamID);
@@ -173,6 +151,7 @@ namespace Trails
 
 		protected override void Unload ()
 		{
+            Logger.Log("Trails has been unloaded!");
 			UnturnedPlayerEvents.OnPlayerUpdatePosition -= PlayerMoved;
 		}
 	}

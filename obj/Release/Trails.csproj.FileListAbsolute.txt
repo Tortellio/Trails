@@ -7,3 +7,10 @@ C:\Users\HPUSER\Documents\Rocket Work\Trails\obj\Release\Trails.dll
 C:\Users\HPUSER\Documents\Rocket Work\Trails\obj\Release\Trails.pdb
 C:\Users\HPUSER\Documents\Rocket Work\Trails\bin\Release\System.Management.dll
 C:\Users\HPUSER\Documents\Rocket Work\Trails\obj\Release\Trails.csprojResolveAssemblyReference.cache
+C:\Users\irfan\Documents\GitHub\Trails\bin\Release\Trails.dll
+C:\Users\irfan\Documents\GitHub\Trails\bin\Release\Trails.pdb
+C:\Users\irfan\Documents\GitHub\Trails\bin\Release\System.Management.dll
+C:\Users\irfan\Documents\GitHub\Trails\obj\Release\Trails.csproj.CoreCompileInputs.cache
+C:\Users\irfan\Documents\GitHub\Trails\obj\Release\Trails.csproj.CopyComplete
+C:\Users\irfan\Documents\GitHub\Trails\obj\Release\Trails.dll
+C:\Users\irfan\Documents\GitHub\Trails\obj\Release\Trails.pdb
